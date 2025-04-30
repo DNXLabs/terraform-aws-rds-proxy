@@ -12,7 +12,7 @@ resource "aws_db_proxy" "proxy" {
     auth_scheme               = "SECRETS"
     iam_auth                  = "DISABLED"
     secret_arn                = aws_secretsmanager_secret.proxy_rds_credentials.arn
-    client_password_auth_type = "MYSQL_NATIVE_PASSWORD"
+    client_password_auth_type = var.client_password_auth_type
   }
 
 }

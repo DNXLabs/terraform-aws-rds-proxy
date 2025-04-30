@@ -38,4 +38,8 @@ variable "rds_apps_sg_id" {
   type        = string
 }
 
+variable "client_password_auth_type" {
+  description = "The type of authentication the proxy uses for connections from clients."
+  type        = string
+}
 
