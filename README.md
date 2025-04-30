@@ -3,7 +3,7 @@
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-template/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-template/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-template)](https://github.com/DNXLabs/terraform-aws-template/blob/master/LICENSE)
 
-## Module Example
+## Module Example:
 ```
 module "rds_proxy" {
   source = "git::https://github.com/DNXLabs/terraform-aws-rds-proxy.git?ref=1.0"
@@ -31,11 +31,23 @@ module "rds_proxy" {
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-No input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| client\_password\_auth\_type | The type of authentication the proxy uses for connections from clients. | `string` | n/a | yes |
+| cluster\_identifier | Cluster identifier for the Aurora cluster | `string` | n/a | yes |
+| db\_name | Name of the default database | `string` | n/a | yes |
+| db\_port | Database port number | `number` | n/a | yes |
+| db\_subnet\_ids | List of subnet IDs for the RDS Proxy | `list(string)` | n/a | yes |
+| engine\_family | Proxy Engine Family | `string` | n/a | yes |
+| proxy\_name | Proxy name | `string` | n/a | yes |
+| rds\_apps\_sg\_id | Security group ID for RDS applications | `string` | n/a | yes |
+| username | Master username for database authentication | `string` | n/a | yes |
 
 ## Outputs
 
